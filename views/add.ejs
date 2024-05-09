@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/add-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+<link rel="icon" type="image/png" sizes="32x32" href="/public/img/fir.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/public/img/fir.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+    <title>Добавить ДЗ</title>
+  </head>
+
+  <body>
+    <form name="f-1" method="post" action="/add">
+      <div>
+        <img class="ikondark" src="/public/img/BacL2.png" height="100px">
+      </div>
+      <table id="datat">
+        <tr>
+          <td>Действительно до</td>
+        </tr>
+        <td><input id="data" name="data" type="date" /></td>
+      </table>
+
+      <table id="dataCRt">
+        <tr>
+          <td>Дата создания</td>
+        </tr>
+        <td><input name="dataCR" type="text" id="dataCR" /></td>
+      </table>
+
+      <table>
+        <table id="subjectt">
+          <tr>
+            <td>Какой Предмет ?</td>
+          </tr>
+          <td>
+            <select name="subject">
+              <option></option>
+              <option>Испанский язык</option>
+              <option>Факультатив ИНФОРМАТИКА</option>
+              <option>Ин.яз./Английский язык</option>
+              <option>Литература</option>
+              <option>Русский язык</option>
+              <option>Алгебра</option>
+              <option>Геометрия</option>
+              <option>Информатика и ИКТ</option>
+              <option>История</option>
+              <option>Обществознание</option>
+              <option>Биология</option>
+              <option>География</option>
+              <option>Физика</option>
+              <option>Химия</option>
+              <option>Технология</option>
+              <option>Обж</option>
+              <option>Физкультура</option>
+              <option>Родная Литература</option>
+              <option>Родной язык</option>
+              <option>Профориентация</option>
+            </select>
+          </td>
+        </table>
+        <table id="dz">
+          <tr>
+            <td>Домашнее задание</td>
+          </tr>
+          <td>
+            <textarea
+              id="dz"
+              name="dz"
+              cols="30"
+              rows="5"
+              placeholder="Домашнее задание"
+            ></textarea>
+          </td>
+        </table>
+
+       
+      <button type="submit">Добавить</button>
+      <a id="Aview" href="/view">Перейти в дневник </a>
+    </form>
+
+    <script>
+      const date = new Date();
+      let d = new Intl.DateTimeFormat().format(date);
+      document.getElementById("dataCR").value = d;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background-size: 100%;
+  color: rgb(27, 27, 27); 
+  margin: 0px;
+}
+
+input {
+  background-color: rgb(255 87 51);
+  color:rgb(255, 255, 255);
+  border-radius: 0px;
+}
+
+select {
+  background-color: rgb(255 87 51);
+
+  border-radius: 20px;
+}
+
+#subjectt {
+  background-color: rgb(184 184 184);
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+#datat {
+  background-color: rgb(184 184 184);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#dz {
+  background-color: rgb(184 184 184);
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#dataCRt {
+  background-color: rgb(184 184 184);
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+a,
+button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+#w {
+  background-color: rgb(184 184 184);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+a,
+#Aview {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgb(27, 27, 27); 
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+
+
+/* Телефон */
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  table {
+    font-size: 100%;
+  }
+}
+/* Планшет */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  table {
+    font-size: 115%;
+  }
+}
+/* пк ноут */
+@media screen and (max-width: 2920px) and (min-width: 769px) {
+  table {
+    font-size: 130%;
+  }
+}

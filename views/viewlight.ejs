@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/viewlight-style.css">
+  <link rel="stylesheet" media="screen and (color)" href="example.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/img/fir.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/img/fir.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#1b1b1b">
+  <meta name="theme-color" content="#1b1b1b">
+  <title >Домашние задание</title>
+
+</head>
+
+<body class="body">
+  <div class="upward">
+    <a href="view"><img src="/public/img/TOP.png" width="70"> </a>
+  </div>
+  <table class="tableth" style="width:100%">
+    <thead>
+      <tr>
+        <th>Сообщение от классного руководителя</th>
+        <th>Действительно до</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <% for(let i=0; i<dataCoKP.length; i++) { %>
+        <tr>
+
+          <td>
+            <%= dataCoKP[i]['w'] %> 
+          </td>
+          <td>
+            <%= dataCoKP[i]['data'] %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+
+    <header class="header">
+      <h2>Домашняя работа</h2>
+      <img src="/public/img/BacL2.png" width="200">
+      <button id='idBtoff'onclick="btoff()">Ещё</button>
+  
+      <div class="off">
+        <h3>ссылка 1</h3>
+        <h3>ссылка 2</h3>
+        <h3><a href="https://vk.com/savaa20" target="_blank">Автор</a></h3>
+        <h3></h3>
+      </div>
+  
+    <div class="divsearch">
+      <input type="text" class="inputsearch">
+      <img class="ikon" src="/public/img/searchL.png">
+    </div>
+
+    
+
+      <table class="example" style="width:100%">
+        <thead>
+          <tr class="thEx">
+            <th>№</th>
+            <th>Предмет</th>
+            <th>Дата</th>
+            <th>Домашнее задание</th>
+            <th>Дата создания </th>
+          </tr>
+        </thead>
+        <tbody class="search">
+          <% for(let i=0; i<data.length; i++) { %>
+            <tr class="Dzz" class="DzzSize">
+              <td>
+                №<%= (i+1) %>
+              </td>
+    
+              <td>
+                <%= data[i]['subject'] %>
+              </td>
+    
+              <td>
+                <%= data[i]['data'] %>
+              </td>
+    
+              <td>
+                <%= data[i]['dz'] %>
+                  <!-- <%= data[i]['w'] %> -->
+    
+              <td>
+                <%= data[i]['dataCR'] %>
+              </td>
+    
+            </tr>
+            <% } %>
+    
+        </tbody>
+      </table>
+
+
+
+
+  </div>
+
+
+
+
+  <script>
+    localStorage.setItem('theme', "light");
+    window.addEventListener('scroll',function(){
+      let scroll = document.querySelector('.upward')
+      scroll.classList.toggle("active", window.scrollY>400)
+    })
+    function scrollTopTop (){
+      window.scrollTo({
+        top:0,
+        behavior:'smooth'
+      })
+    }
+
+    document.querySelector('.inputsearch').oninput = function () {
+        let val = this.value.trim()
+        let searchItems = document.querySelectorAll('.search tr')
+        if (val != '') {
+          searchItems.forEach(function (elem) {
+            if (elem.innerText.search(val) == -1) {
+              elem.classList.add('hide')
+            }
+            else {
+              elem.classList.remove('hide')
+            }
+          })
+        }
+        else {
+          searchItems.forEach(function (elem) {
+            elem.classList.remove('hide')
+          })
+        }
+      }
+
+
+
+
+
+
+
+    let off = document.querySelector('.off');
+    function btoff() {
+      if (off.classList == 'off') {
+
+        off.classList.remove('off')
+        off.classList.add('on');
+      } else {
+        off.classList.remove('on')
+        off.classList.add('off');
+      }
+    }
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

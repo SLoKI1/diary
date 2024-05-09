@@ -1,0 +1,67 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background-size: 100%;
+  color: rgb(27, 27, 27);
+  margin: 0px;
+}
+
+
+a{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#idBtoff {
+  display: flex;
+  text-align: start;
+  border-radius: 5px 10px 10px 5px;
+  padding: 10px;
+
+  border: 0px;
+  background-color: rgb(27, 27, 27);
+}
+
+.off {
+  display: none;
+}
+button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Телефон */
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  div {
+    font-size: 100%;
+  }
+}
+/* Планшет */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  div {
+    font-size: 115%;
+  }
+}
+/* пк ноут */
+@media screen and (max-width: 2920px) and (min-width: 769px) {
+  div {
+    font-size: 130%;
+  }
+}
